@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONG - Página Inicial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <a href="#app" class="pular-link">Pular para o conteúdo</a>
+
+  <header>
+    <button type="button" id="botao-tema" class="botao-tema" aria-pressed="false">🌙 Modo escuro</button>
+    <h1 id="page-title">Sobre a ONG</h1>
+    <p id="page-subtitle">Conheça nossa organização, nossa missão e nossos objetivos.</p>
+  </header>
+
+  <nav aria-label="Navegação principal">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-input">
+    <label for="menu-toggle" class="menu-toggle-label" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <div class="nav-links">
+      <a href="#/" data-rota="/">Início</a>
+
+      <div class="nav-item-dropdown">
+        <a href="#/projetos" data-rota="/projetos">Projetos</a>
+        <div class="dropdown-menu">
+          <a href="#/projetos/voluntariado">Voluntariado</a>
+          <a href="#/projetos/doacoes">Doações</a>
+          <a href="#/projetos/acoes-comunitarias">Ações comunitárias</a>
+        </div>
+      </div>
+
+      <a href="#/cadastro" data-rota="/cadastro">Cadastro</a>
+    </div>
+  </nav>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer>
+    <p>&copy; 2026 ONG - Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Biblioteca externa (CDN): IMask, para máscaras de digitação -->
+  <script src="https://cdn.jsdelivr.net/npm/imask@7.6.1/dist/imask.min.js"></script>
+
+  <!-- Meus scripts, na ordem: dados -> funções de apoio -> templates -> navegação -> eventos -->
+  <script src="../js/dados.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/validacao.js"></script>
+  <script src="../js/mascaras.js"></script>
+  <script src="../js/templates.js"></script>
+  <script src="../js/router.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
